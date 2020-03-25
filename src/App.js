@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './images/r7t-iso.svg';
-import './app.css';
+import './App.css';
 import { Provider } from 'react-redux';
 import store from './store'
 import Header from './components/Header/Header';
