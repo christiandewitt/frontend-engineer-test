@@ -1,0 +1,12 @@
+.info-window-wrapper {
+    text-align: left;
+}
+
+.info-window-wrapper h1 {
+    font-size: 1.5rem;
+}
+
+.info-window-wrapper label {
+    font-weight: bold;
+    margin-right: 3px;
+}
