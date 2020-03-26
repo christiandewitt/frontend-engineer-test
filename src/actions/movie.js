@@ -8,6 +8,9 @@ export const fetchMovies = () => dispatch => {
             type: FETCH_MOVIES,
             payload: parse(data)
         }))
+        .catch ((e) => {
+            console.error('Error has occurred while fetching data', e);
+        });
 };
 
 export const setCurrentMovie = (movie) => dispatch => {

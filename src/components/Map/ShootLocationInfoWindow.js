@@ -1,6 +1,7 @@
 import React from 'react'
 import { InfoWindow } from '@react-google-maps/api'
 import Moment from 'react-moment';
+import 'moment-timezone';
 import '../../styles/infoWindow.css';
 import PropTypes from 'prop-types';
 
@@ -28,9 +29,10 @@ function ShootLocationInfoWindow(props) {
                 <label>Shoot Date{props.site.shootDate.length > 1 ? "(s)" : ""}: </label>
                 {
                     props.site.shootDate.map((shootDate, index) => {
+                        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
                         return <div key={index}>
                             <span>
-                                <Moment format="DD MMM YYYY">
+                                <Moment format="DD MMM YYYY (UTC Z)" tz={tz}>
                                     {shootDate}
                                 </Moment>
                             </span>
